@@ -18,4 +18,22 @@ public class DirectorTest {
         assertEquals("123456789", director.getNiNumber());
         assertEquals(100000.00, director.getSalary(), 0.01);
     }
+
+    @Test
+    public void directorCanGetRaise(){
+        director.raiseSalary(10000.00);
+        assertEquals(110000.00, director.getSalary(), 0.01);
+    }
+
+    @Test
+    public void directorCanGetBonus(){
+        director.payBonus();
+        assertEquals(101000.00, director.getSalary(), 0.01);
+    }
+
+    @Test
+    public void directorHasBudget(){
+        assertEquals(50000.00, director.getBudget(), 0.01);
+    }
+
 }
