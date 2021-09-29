@@ -17,23 +17,17 @@ public abstract class Employee {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if (name != null) {
+            this.name = name;
+        }
     }
 
     public String getNiNumber() {
         return niNumber;
     }
 
-    public void setNiNumber(String niNumber) {
-        this.niNumber = niNumber;
-    }
-
     public double getSalary() {
         return salary;
-    }
-
-    public void setSalary(double salary) {
-        this.salary = salary;
     }
 
     public void raiseSalary(double raise) {

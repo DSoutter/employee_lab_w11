@@ -46,4 +46,16 @@ public class EmployeeTest {
         employee.raiseSalary(-5000.00);
         assertEquals(30000.00, employee.getSalary(),0.01);
     }
+
+    @Test
+    public void canSetNameTrue(){
+        employee.setName("Frederick");
+        assertEquals("Frederick", employee.getName());
+    }
+
+    @Test
+    public void canSetNameFalse(){
+        employee.setName(null);
+        assertEquals("Fred", employee.getName());
+    }
 }
