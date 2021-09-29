@@ -11,7 +11,7 @@ public class EmployeeTest {
 
     @Before
     public void before(){
-        employee = new Developer("Fred", "abcde1234", 30000);
+        employee = new Developer("Fred", "abcde1234", 30000.0);
     }
 
     @Test
@@ -26,12 +26,18 @@ public class EmployeeTest {
 
     @Test
     public void employeeHasSalary(){
-        assertEquals(30000, employee.getSalary());
+        assertEquals(30000.0, employee.getSalary(), 0.01);
     }
 
     @Test
     public void employeeCanGetRaise(){
-        employee.getRaise();
-        assertEquals(30300, employee.getSalary());
+        employee.raiseSalary(1000.00);
+        assertEquals(31000.00, employee.getSalary(),0.01);
+    }
+
+    @Test
+    public void employeeCanGetBonus(){
+        employee.payBonus();
+        assertEquals(30300.0, employee.getSalary(), 0.01);
     }
 }
