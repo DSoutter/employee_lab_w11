@@ -18,4 +18,14 @@ public class EmployeeTest {
     public void employeeHasName(){
         assertEquals("Fred", employee.getName());
     }
+
+    @Test
+    public void employeeHasniNumber(){
+        assertEquals("abcde1234", employee.getNiNumber());
+    }
+
+    @Test
+    public void employeeHasSalary(){
+        assertEquals(30000, employee.getSalary());
+    }
 }
