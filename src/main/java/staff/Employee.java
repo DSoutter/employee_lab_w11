@@ -35,4 +35,8 @@ public abstract class Employee {
     public void setSalary(int salary) {
         this.salary = salary;
     }
+
+    public void getRaise(){
+        this.salary *= 1.01;
+    }
 }

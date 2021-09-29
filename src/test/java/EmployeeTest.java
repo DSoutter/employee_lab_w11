@@ -28,4 +28,10 @@ public class EmployeeTest {
     public void employeeHasSalary(){
         assertEquals(30000, employee.getSalary());
     }
+
+    @Test
+    public void employeeCanGetRaise(){
+        employee.getRaise();
+        assertEquals(30300, employee.getSalary());
+    }
 }
