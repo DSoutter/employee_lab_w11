@@ -1,4 +1,21 @@
+import org.junit.Before;
+import org.junit.Test;
+import staff.Employee;
+import staff.techStaff.Developer;
+
+import static org.junit.Assert.assertEquals;
+
 public class EmployeeTest {
-    public EmployeeTest() {
+
+    Employee employee;
+
+    @Before
+    public void before(){
+        employee = new Developer("Fred", "abcde1234", 30000);
+    }
+
+    @Test
+    public void employeeHasName(){
+        assertEquals("Fred", employee.getName());
     }
 }
